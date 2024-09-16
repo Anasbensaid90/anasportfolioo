@@ -37,7 +37,7 @@
             ],
             "scripts": [
             ],
-            "baseHref": "/anasportfolioo/"
+            "baseHref": "/"
           },
           "configurations": {
             "production": {
