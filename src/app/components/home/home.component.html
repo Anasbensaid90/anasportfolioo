@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="homeContainer">
+    <div class="socialIcons" *ngIf="isMobile">
+      <div class="button linBtn">
+        <div class="icon" (click)="redirectToLinkdin()">
+          <i class="bx bxl-linkedin"></i>
+        </div>
+        <span>Linkedin</span>
+      </div>
+      <div class="button gitBtn">
+        <div class="icon">
+          <i class="bx bxl-github" (click)="redirectToGithub()"></i>
+        </div>
+        <span>Github</span>
+      </div>
+    </div>
+    <div class="homeContent">
+      <h1
+        class="name"
+        data-aos="fade-right"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+      >
+        Bienvenue, je suis Anas Bensaid.
+
+      </h1>
+      <div class="info">
+        <p>
+          Actuellement étudiant en 3ème année de cycle d’ingénieur à l’École Nationale Supérieure des Mines de Rabat (ENSMR), je suis à la recherche d'un stage de Projet de Fin d'Études (PFE).
+        </p>
+      </div>
+      <div class="btn">
+        <button (click)="redirectToProject()"><span></span> Projects</button>
+      </div>
+    </div>
+    <div class="email" *ngIf="isMobile">
+      <a href="mailto:anas.bensaid@enim.ac.ma">anas.bensaid@enim.ac.ma</a>
+    </div>
+    <div class="scrollDown" (click)="redirectToAbout()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>

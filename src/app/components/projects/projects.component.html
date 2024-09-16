@@ -1,0 +1,172 @@
+<div class="container">
+  <div class="projectContainer">
+    <h2 class="heading">
+      <span
+        class="headingMain"
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+        >Projets</span
+      >
+      <span
+        class="headingSub"
+        data-aos="fade-up"
+        data-aos-delay="150"
+        data-aos-duration="1000"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+      >
+Ici, vous trouverez certains de mes projets, avec les liens vers les versions en ligne.
+
+
+      </span>
+    </h2>
+
+    <app-project-items Responsive>
+      <img
+        src="../../../assets/projects/project.png"
+        alt="Software Screenshot"
+        class="projectsRowImg"
+        loading="lazy"
+      />
+      <h3
+        class="projectsRowContentTitle"
+        data-aos="fade-down-left"
+        data-aos-delay="120"
+        data-aos-duration="500"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+      >
+        Projet1
+      </h3>
+      <p
+        class="projectsRowContentDesc"
+        data-aos="fade-left"
+        data-aos-delay="150"
+        data-aos-duration="500"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+      >
+        description
+      </p>
+      <div
+        class="tools"
+        data-aos="zoom-in-left"
+        data-aos-delay="190"
+        data-aos-duration="500"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+      >
+        <div class="toolsName" *ngFor="let tools of firstPoject">
+          {{ tools.name | uppercase }}
+        </div>
+      </div>
+      <button mat-raised-button class="livBtn" (click)="projectOne()">
+        Lien en direct
+      </button>
+    </app-project-items>
+
+    <app-project-items Responsive>
+      <img
+        src="../../../assets/projects/project.png"
+        alt="Software Screenshot"
+        class="projectsRowImg"
+        loading="lazy"
+      />
+      <h3
+        class="projectsRowContentTitle"
+        data-aos="fade-down-left"
+        data-aos-delay="120"
+        data-aos-duration="500"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+      >
+        Project2
+      </h3>
+      <p
+        class="projectsRowContentDesc"
+        data-aos="fade-left"
+        data-aos-delay="150"
+        data-aos-duration="500"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+      >
+        description
+      </p>
+      <div
+        class="tools"
+        data-aos="zoom-in-left"
+        data-aos-delay="190"
+        data-aos-duration="500"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+      >
+        <div class="toolsName" *ngFor="let tools of secoundProject">
+          {{ tools.name | uppercase }}
+        </div>
+      </div>
+      <button mat-raised-button class="livBtn" (click)="projectTwo()">
+        Lien en direct
+      </button>
+    </app-project-items>
+
+    <app-project-items Responsive>
+      <img
+        src="../../../assets/projects/project.png"
+        alt="Software Screenshot"
+        class="projectsRowImg"
+        loading="lazy"
+      />
+      <h3
+        class="projectsRowContentTitle"
+        data-aos="fade-down-left"
+        data-aos-delay="120"
+        data-aos-duration="500"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+      >
+        Projet3
+      </h3>
+      <p
+        class="projectsRowContentDesc"
+        data-aos="fade-left"
+        data-aos-delay="150"
+        data-aos-duration="500"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+      >
+        description
+      </p>
+      <div
+        class="tools"
+        data-aos="zoom-in-left"
+        data-aos-delay="190"
+        data-aos-duration="500"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+      >
+        <div class="toolsName" *ngFor="let tools of thirdProject">
+          {{ tools.name | uppercase }}
+        </div>
+      </div>
+      <button mat-raised-button class="livBtn" (click)="projectThree()">
+        Lien en direct
+      </button>
+    </app-project-items>
+
+
+  </div>
+</div>
