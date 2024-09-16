@@ -36,8 +36,7 @@
               "./node_modules/aos/dist/aos.css"
             ],
             "scripts": [
-            ],
-            "baseHref": "/"
+            ]
           },
           "configurations": {
             "production": {
