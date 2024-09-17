@@ -43,10 +43,16 @@ export class TopbarComponent {
     navLink.forEach((e: HTMLElement) => {
       this.renderer.removeClass(e, 'active');
     });
+
     const activeLink = this.el.nativeElement.querySelector(
-      `.navItems a[href='#${id}']`
+      `.navItems a[href='/#${id}']`
     );
-    this.renderer.addClass(activeLink, 'active');
+
+    if (activeLink) {
+      this.renderer.addClass(activeLink, 'active');
+    } else {
+      console.error(`No element found for href='#${id}'`);
+    }
   };
 
   ngOnDestroy() {
