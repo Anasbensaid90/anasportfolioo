@@ -45,7 +45,7 @@ export class TopbarComponent {
     });
 
     const activeLink = this.el.nativeElement.querySelector(
-      `.navItems a[href='/anasportfolioo/anasportfolioo//#${id}']`
+      `.navItems a[href='/#${id}']`
     );
 
     if (activeLink) {
