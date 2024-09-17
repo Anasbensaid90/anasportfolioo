@@ -43,16 +43,10 @@ export class TopbarComponent {
     navLink.forEach((e: HTMLElement) => {
       this.renderer.removeClass(e, 'active');
     });
-
     const activeLink = this.el.nativeElement.querySelector(
       `.navItems a[href='#${id}']`
     );
-
-    if (activeLink) {
-      this.renderer.addClass(activeLink, 'active');
-    } else {
-      console.error(`No element found for href='#${id}'`);
-    }
+    this.renderer.addClass(activeLink, 'active');
   };
 
   ngOnDestroy() {
@@ -65,4 +59,17 @@ export class TopbarComponent {
     this.isMenuOpen = !this.isMenuOpen;
     this.sidenavToggle.emit();
   };
+  redirectToProjects = () => {
+    window.location.hash = '#projects';
+  };
+  redirectToAbout = () => {
+    window.location.hash = '#about';
+  };
+  redirectToHome = () => {
+    window.location.hash = '#home';
+  };
+  redirectToContact = () => {
+    window.location.hash = '#contact';
+  };
+
 }

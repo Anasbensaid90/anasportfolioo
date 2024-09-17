@@ -23,10 +23,26 @@
       <span class="spacer"></span>
       <div class="navItems" *ngIf="!isMobile">
         <ul>
-          <li><a style="--i: 1" routerLink="/home" routerLinkActive="active">Accueil</a></li>
-          <li><a style="--i: 2" routerLink="/about" routerLinkActive="active">À propos</a></li>
-          <li><a style="--i: 3" routerLink="/projects" routerLinkActive="active">Projets</a></li>
-          <li><a style="--i: 4" routerLink="/contact" routerLinkActive="active">Contact</a></li>
+          <li>
+            <div class="btn">
+              <button (click)="redirectToHome()"><span></span> Accueil</button>
+            </div>
+          </li>
+          <li>
+            <div class="btn">
+              <button (click)="redirectToAbout()"><span></span> À propos</button>
+            </div>
+          </li>
+          <li>
+            <div class="btn">
+              <button (click)="redirectToProjects()"><span></span> Projets</button>
+            </div>
+          </li>
+          <li>
+            <div class="btn">
+              <button (click)="redirectToContact()"><span></span> Contact</button>
+            </div>
+          </li>
         </ul>
       </div>
       <div
