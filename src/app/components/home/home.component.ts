@@ -44,6 +44,6 @@ export class HomeComponent {
   };
 
   redirectToAbout = () => {
-    window.location.href = '#about';
+    window.location.hash = '#about';
   };
 }
