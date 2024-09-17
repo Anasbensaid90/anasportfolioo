@@ -40,7 +40,7 @@ export class HomeComponent {
 
 
   redirectToProject = () => {
-    window.location.href = '#projects';
+    window.location.hash = '#projects';
   };
 
   redirectToAbout = () => {
