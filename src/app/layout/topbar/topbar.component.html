@@ -23,27 +23,12 @@
       <span class="spacer"></span>
       <div class="navItems" *ngIf="!isMobile">
         <ul>
-          <li>
-            <div class="btn">
-              <button (click)="redirectToHome()"><span></span> Accueil</button>
-            </div>
-          </li>
-          <li>
-            <div class="btn">
-              <button (click)="redirectToAbout()"><span></span> À propos</button>
-            </div>
-          </li>
-          <li>
-            <div class="btn">
-              <button (click)="redirectToProjects()"><span></span> Projets</button>
-            </div>
-          </li>
-          <li>
-            <div class="btn">
-              <button (click)="redirectToContact()"><span></span> Contact</button>
-            </div>
-          </li>
+          <li><button (click)="redirectToHome()">Accueil</button></li>
+          <li><button (click)="redirectToAbout()">À propos</button></li>
+          <li><button (click)="redirectToProjects()">Projets</button></li>
+          <li><button (click)="redirectToContact()">Contact</button></li>
         </ul>
+
       </div>
       <div
         id="humMenu"
