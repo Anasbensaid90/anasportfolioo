@@ -1,12 +1,6 @@
+// topbar.component.ts
 import { BreakpointObserver } from '@angular/cdk/layout';
-import {
-  Component,
-  ElementRef,
-  EventEmitter,
-  Output,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -15,14 +9,12 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./topbar.component.scss'],
 })
 export class TopbarComponent {
-  isMenuOpen: boolean = false;
   isMobile: boolean = false;
+  isMenuOpen: boolean = false;  // Add this line
 
   @ViewChild('indicator') indicator!: ElementRef;
 
   private subscription!: Subscription;
-
-  @Output() sidenavToggle = new EventEmitter<void>();
 
   constructor(
     private observer: BreakpointObserver,
@@ -53,23 +45,15 @@ export class TopbarComponent {
     this.subscription.unsubscribe();
   }
 
-  toggleSidenav = () => {
-    let menu = this.el.nativeElement.querySelector('#humMenu');
-    this.renderer.addClass(menu, 'openMenu');
-    this.isMenuOpen = !this.isMenuOpen;
-    this.sidenavToggle.emit();
-  };
-  redirectToProjects = () => {
-    window.location.hash = '#projects';
-  };
-  redirectToAbout = () => {
-    window.location.hash = '#about';
-  };
-  redirectToHome = () => {
-    window.location.hash = '#home';
-  };
-  redirectToContact = () => {
-    window.location.hash = '#contact';
+  // Navigation Methods
+  scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
+  toggleSidenav = () => {  // Add this method
+    this.isMenuOpen = !this.isMenuOpen;
+  };
 }

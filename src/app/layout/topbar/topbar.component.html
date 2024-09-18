@@ -13,7 +13,7 @@
             <span></span>
             <span></span>
             <div class="image">
-<!--              <img src="../../../assets/img/icon.png" alt="" />-->
+              <!--              <img src="../../../assets/img/icon.png" alt="" />-->
             </div>
           </div>
         </div>
@@ -23,10 +23,10 @@
       <span class="spacer"></span>
       <div class="navItems" *ngIf="!isMobile">
         <ul>
-          <li><a style="--i: 1" href="#" (click)="redirectToHome()">Accueil</a></li>
-          <li><a style="--i: 2" href="#" (click)="redirectToAbout()">À propos</a></li>
-          <li><a style="--i: 3" href="#" (click)="redirectToProjects()">Projets</a></li>
-          <li><a style="--i: 4" href="#" (click)="redirectToContact()">Contact</a></li>
+          <li><a style="--i: 1" (click)="scrollToSection('home')">Accueil</a></li>
+          <li><a style="--i: 2" (click)="scrollToSection('about')">À propos</a></li>
+          <li><a style="--i: 3" (click)="scrollToSection('projects')">Projets</a></li>
+          <li><a style="--i: 4" (click)="scrollToSection('contact')">Contact</a></li>
         </ul>
       </div>
       <div
